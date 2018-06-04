@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gem.demo.dao.MessageMapper">
+ <!--  //根据类别号获得该类别下的所有问题
+    public List<Message> getMessageByCatory(int catory_Id);
+    //根据问题号得到答案
+    public String getAnswerById(int messageId);
+-->
+    <select id="getMessageByCatory" resultType="com.gem.demo.entity.Message" parameterType="int">
+        select * from message_detail where mcatory_id=#{_parameter}
+    </select>
+
+    <select id="getAnswerById" resultType="String" parameterType="int">
+        select content from message_detail where id=#{_parameter}
+    </select>
+</mapper>

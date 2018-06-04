@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gem.demo.dao.MessageCatoryMapper">
+  <!-- //获得所有的类别，在初始页面显示
+    public List<MessageCatory> getAllMessageCatory();-->
+    <select id="getAllMessageCatory" resultType="com.gem.demo.dao.MessageMapper">
+        select * from messcatory
+    </select>
+</mapper>
